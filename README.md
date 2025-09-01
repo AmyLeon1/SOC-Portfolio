@@ -1,7 +1,3 @@
-# SOC-Portfolio
-“SOC Analyst Portfolio showcasing log analysis, detection engineering, incident response, and MITRE ATT&amp;CK mapping.”
-
-
 # 🛡️ Amy Leon – SOC Analyst Portfolio
 
 Welcome to my cybersecurity portfolio!  
@@ -57,6 +53,17 @@ This portfolio demonstrates practical SOC use cases — from log analysis and de
 - Skills: Incident handling, report writing, SOC communication  
 - Tools: Splunk queries, IOC analysis  
 - [View Project](./Week6_IncidentReport)  
+
+---
+
+## 🎓 TryHackMe Labs & Learning
+I use TryHackMe to practice SOC and Blue Team skills in a hands-on environment.  
+
+- **Pre-SOC Path:** Completed ✅  
+- **SOC Level 1:** In Progress  
+- **Blue Team Fundamentals:** Planned  
+
+[View My TryHackMe Profile](https://tryhackme.com/p/amyleon)  
 
 ---
 
