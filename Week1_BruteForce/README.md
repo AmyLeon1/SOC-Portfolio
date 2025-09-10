@@ -31,9 +31,6 @@ Splunk search showing all failed login events from auth.log.
 ![Splunk Upload](screenshots/splunk_dashboard.png)
 
 
-```spl
-index=bruteforce "Failed password"
-
 ---
 
 ## 8. Mitigation with Fail2Ban
