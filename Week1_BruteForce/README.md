@@ -25,9 +25,25 @@ The auth.log file was uploaded to Splunk, with Syslog source type and a dedicate
 
 ---
 
-## 4. Raw Failed Login Events
+## 4. Splunk Failed Login Events
 Splunk search showing all failed login events from auth.log.
 ![Splunk Upload](screenshots/splunk_search.png)
+![Splunk Upload](screenshots/splunk_dashboard.png)
+
+
 ```spl
 index=bruteforce "Failed password"
+
+
+## 8. Mitigation with Fail2Ban
+
+To prevent SSH brute-force attacks, I installed and configured [Fail2Ban](https://www.fail2ban.org/).  
+Fail2Ban monitors log files for repeated failed login attempts and automatically bans offending IP addresses using firewall rules.  
+
+### Installation
+```bash
+sudo apt update
+sudo apt install fail2ban -y
+
+![Fail2Ban](screenshots/fail2ban_install.png)
 
