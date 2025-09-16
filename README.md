@@ -12,7 +12,7 @@ This portfolio demonstrates practical SOC use cases — from log analysis and de
 ### ✅ Week 1 – Brute Force Detection
 **Detecting Brute Force Attacks in Windows/Linux Logs with Splunk**  
 - Skills: Log analysis, SIEM queries, detection engineering  
-- Tools: Splunk, Windows Event Logs (4625), Linux `/var/log/auth.log`, Hydra  
+- Tools: Splunk, Linux `/var/log/auth.log`, Hydra  
 - [View Project](./Week1_BruteForce)  
 
 ---
