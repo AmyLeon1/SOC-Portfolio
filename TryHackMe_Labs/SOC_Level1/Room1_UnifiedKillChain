@@ -1,0 +1,24 @@
+# Unified Kill Chain — TryHackMe SOC1 Path
+Link: https://tryhackme.com/room/unifiedkillchain
+Date: 2025-10-07
+Difficulty: Informational
+Tags: #theory #threatintelligence #frameworks #detection
+
+## Overview
+This room introduced the **Unified Kill Chain**, which extends the MITRE ATT&CK and Lockheed Martin Cyber Kill Chain models.  
+It outlines **18 phases** of adversary operations — from initial reconnaissance through objectives and post-compromise activities.  
+The main takeaway is that the Unified Kill Chain provides a more complete, **end-to-end mapping** of adversarial behavior across both **pre-compromise** and **post-compromise** stages.
+
+## Key Learnings
+- Combines strengths of both MITRE ATT&CK (tactics/techniques) and Cyber Kill Chain (attack lifecycle).
+- Useful for **SOC correlation** — mapping alerts and IOCs to kill chain phases improves detection coverage.
+- Encourages a **defense-in-depth** mindset: monitor and detect early, not only during exploitation.
+
+## SOC Takeaways
+- Use Unified Kill Chain mapping to prioritise detections across different attack stages.  
+- Maintain coverage matrix (e.g., “Detection → Kill Chain Phase”) to identify monitoring gaps.
+- Example use: map Windows Event 4625 (failed logons) to “Credential Access → Credential Use” phase.
+
+## References
+- [Unified Kill Chain whitepaper](https://www.unifiedkillchain.com)
+- TryHackMe: Unified Kill Chain Room
