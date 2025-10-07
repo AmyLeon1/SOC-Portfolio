@@ -1,0 +1,29 @@
+# Intro to Cyber Threat Intelligence — TryHackMe SOC1 Path
+Link: https://tryhackme.com/room/introcyberthreatintel  
+Date: 2025-10-07  
+Difficulty: Informational  
+Tags: #threatintelligence #SOC #CTI #frameworks #intelcycle
+
+## Overview
+This room provides an introduction to **Cyber Threat Intelligence (CTI)** — how security teams gather, analyse, and apply intelligence to defend against adversaries.  
+It explains the **intelligence lifecycle** (Direction → Collection → Processing → Analysis → Dissemination → Feedback) and how CTI supports SOC and incident response activities.
+
+## Key Learnings
+- **Types of intelligence:**
+  - *Strategic* — high-level insights for management and risk decisions.
+  - *Operational* — details on adversary campaigns, motivations, and TTPs.
+  - *Tactical* — specific IOCs (IPs, hashes, domains) for detection.
+  - *Technical* — raw data feeds (logs, malware samples).
+- **Sources of CTI:** open-source intelligence (OSINT), internal logs, threat feeds, dark web monitoring, and ISAC/ISAO sharing.
+- **Frameworks:** MITRE ATT&CK for mapping adversary techniques; STIX/TAXII for structured intelligence sharing.
+- **Benefits for SOCs:**
+  - Adds context to alerts (who, why, how).
+  - Enables prioritisation of incidents based on threat relevance.
+  - Improves proactive defense through indicator-based detections.
+
+## SOC Takeaways
+- Incorporate CTI feeds into SIEM correlation rules to identify known bad indicators.
+- Use CTI to **enrich alerts**: match source IPs, domains, and hashes to threat actor data.
+- Create watchlists from OSINT feeds to detect ongoing campaigns.
+- Regularly map threat actor TTPs to MITRE ATT&CK for detection coverage assessment.
+- Example integration: feed MISP IOCs into Splunk or Security Onion to automate alert correlation.
