@@ -1,0 +1,38 @@
+# Threat Intelligence Tools — TryHackMe SOC1 Path
+Link: https://tryhackme.com/room/threatinteltools  
+Date: 2025-10-08  
+Difficulty: Easy / Informational  
+Tags: #CTI #ThreatIntelligence #SOC #MISP #VirusTotal #AbuseIPDB #OSINT
+
+## Overview
+This room introduces several open-source and community-based threat intelligence tools used by SOC analysts to identify, verify, and enrich Indicators of Compromise (IOCs).  
+It focuses on practical platforms that can be integrated into everyday SOC workflows for faster investigation and response.
+
+## Tools Covered
+- **Urlscan.io** – captures and analyses website snapshots, IPs, resources, and technologies.  
+- **Abuse.ch projects** – includes MalwareBazaar (malware samples), FeodoTracker (botnet C2 IPs), SSL Blacklist (malicious certificates/JA3s), URLhaus and ThreatFox (malicious URLs and IOCs).  
+- **PhishTool** – email analysis platform that helps parse headers, attachments, and links to identify phishing activity.  
+- **VirusTotal** – multi-engine file and URL scanning for quick malware reputation checks.  
+- **AbuseIPDB** – reputation scoring for potentially malicious IPs.  
+- **AlienVault OTX** – community-driven threat sharing platform for IOCs, campaigns, and indicators.  
+
+## Key Learnings
+- Using multiple CTI sources helps validate findings and reduce false positives.  
+- Threat intelligence tools give valuable context for SOC investigations — confirming whether an alert or IOC is part of a wider campaign.  
+- Most platforms support APIs, which makes it possible to automate enrichment within SIEM or SOAR systems.  
+- MISP and STIX/TAXII support structured, automated sharing of intelligence across teams or organisations.
+
+## Practical Takeaways
+- Automate IOC lookups (IPs, hashes, domains) against multiple feeds to confirm confidence levels.  
+- Integrate CTI feeds into SIEMs like Splunk or Security Onion to flag known malicious indicators.  
+- Use JA3 fingerprints and SSL Blacklists to detect recurring malicious TLS traffic.  
+- For phishing cases, analyse email headers, extract hashes from attachments, and verify through VirusTotal or MalwareBazaar.
+
+## Scenario Exercises (Email Hash Analysis)
+Two short scenarios involved examining `.eml` files to extract SHA256 hashes from attachments and check them against threat intelligence sources:
+
+- **Scenario 1 (Email2.eml):** After extracting the attachment’s SHA256, a lookup in Cisco Talos flagged it as **HIDDENEXT/Worm.Gen**, confirming it as a known worm.  
+- **Scenario 2 (Email3.eml):** The attachment `Sales_Receipt 5606.xls` produced a SHA256 linked to the **Dridex** malware family.  
+
+**SOC takeaway:**  
+Always calculate hashes from suspicious attachments and cross-check them against CTI platforms (Talos, VirusTotal, MalwareBazaar, OTX) to quickly confirm malware type and threat relevance.
